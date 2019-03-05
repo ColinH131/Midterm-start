@@ -45,7 +45,7 @@ public class cmdTankControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_Thisrigidbody.velocity.magnitude < 8f)
+        if (_Thisrigidbody.velocity.magnitude < 4f)
         {
             _Thisrigidbody.AddForce(transform.forward * inputAxis.y * forceMultiplier, ForceMode.Impulse);
         }
@@ -57,6 +57,7 @@ public class cmdTankControl : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             keyHeld = true;
+            
         }
 
         if (Input.GetKey(KeyCode.S))
