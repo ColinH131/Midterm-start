@@ -21,7 +21,7 @@ public class mouseRaycast : MonoBehaviour
         RaycastHit myHit;
         if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out myHit, cameraRayDistance))
         {
-            paintcube.transform.position = myHit.point
+           // paintcube.transform.position = myHit.point
         }
        
     }

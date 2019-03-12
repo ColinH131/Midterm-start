@@ -17,7 +17,7 @@ public class wallScript : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter(Collision collision)
     {
         int toneIndex = GetCollisionStrength(collision);
 		
@@ -27,7 +27,7 @@ public class wallScript : MonoBehaviour
 	
 
 
-    int GetCollisionStrength(Collision2D collision)
+    int GetCollisionStrength(Collision collision)
     {
         
         Vector3 normal = collision.contacts[0].normal;

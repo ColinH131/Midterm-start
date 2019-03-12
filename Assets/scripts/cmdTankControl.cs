@@ -11,6 +11,7 @@ public class cmdTankControl : MonoBehaviour
     public float forceMultiplier = 1.5f;
     public float tankVelocity;
     public float inputToTorque;
+    public float torqueMultiplier = .5f;
     public float tankAccel;
     
     private bool isMoving;
@@ -49,7 +50,7 @@ public class cmdTankControl : MonoBehaviour
         {
             _Thisrigidbody.AddForce(transform.forward * inputAxis.y * forceMultiplier, ForceMode.Impulse);
         }
-        _Thisrigidbody.AddTorque(0, inputToTorque, 0, ForceMode.VelocityChange);
+        _Thisrigidbody.AddTorque(0, (inputToTorque * torqueMultiplier ), 0, ForceMode.VelocityChange);
     }
 
     void CheckKeys()
@@ -75,5 +76,6 @@ public class cmdTankControl : MonoBehaviour
             RotateHeld = true;
         }
     }
+
 
 }
